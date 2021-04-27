@@ -1,2 +1,2 @@
 include(":anyadapter", ":app")
-rootProject.name = "anyadapter-root"
+rootProject.name = "Anyadapter"
