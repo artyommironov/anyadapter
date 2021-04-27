@@ -1,23 +1,24 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-orange.svg)](https://opensource.org/licenses/Apache-2.0)
+[![](https://jitpack.io/v/artyommironov/anyadapter.svg)](https://jitpack.io/#artyommironov/anyadapter)
 
 # anyadapter
 Forget about writing RecyclerView adapters!
 
 ## Setup
 In root `build.gradle`
-```gradle
+```
 allprojects {
-  repositories {
-    ...
-    maven { url 'https://jitpack.io' }
-  }
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
 }
 ```
 
 In module `build.gradle`
 ```
 dependencies {
-  implementation 'com.github.artyommironov:anyadapter:1.1.2'
+    implementation 'com.github.artyommironov:anyadapter:1.0.0'
 }
 ```
 
@@ -27,18 +28,18 @@ Suppose you want to show multiple item types in RecyclerView (for example posts 
 ### 1. Create classes extending AnyHolder for your items
 ```kotlin
 class PostHolder(
-  parent: ViewGroup,
-  onClick: (Post) -> Unit
+    parent: ViewGroup,
+    onClick: (Post) -> Unit
 ) : AnyHolder<Post>(parent, R.layout.item) {
-  private val textTitle = itemView.findViewById<TextView>(R.id.textTitle)
+    private val textTitle = itemView.findViewById<TextView>(R.id.textTitle)
 
-  init {
-    textTitle.setOnClickListener { onClick(currentItem) }
-  }
+    init {
+        textTitle.setOnClickListener { onClick(currentItem) }
+    }
 
-  override fun onBind(item: Post) {
-    textTitle.text = item.message
-  }
+    override fun onBind(item: Post) {
+        textTitle.text = item.message
+    }
 }
 
 data class Post(val message: String)
@@ -47,9 +48,9 @@ data class Post(val message: String)
 ### 2. Create AnyAdapter and pass your holders to it:
 ```kotlin
 val adapter = AnyAdapter()
-  .map { PostHolder(it, ::onPostClick) }
-  .map { HeaderHolder(it) }
-  .map { AdHolder(it) }
+    .map { PostHolder(it, ::onPostClick) }
+    .map { HeaderHolder(it) }
+    .map { AdHolder(it) }
 
 recyclerView.adapter = adapter
 ```
@@ -61,7 +62,7 @@ adapter.submitList(listOf("Header", Post("Hello world!"), ..))
 
 ## License
 ```txt
-Copyright 2019 Artyom Mironov
+Copyright 2021 Artyom Mironov
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
