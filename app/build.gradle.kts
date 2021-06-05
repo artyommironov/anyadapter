@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-  compileSdkVersion(Sdk.compile)
+  compileSdkVersion(29)
 
   defaultConfig {
     applicationId = "com.artyommironov.anyadaptersample"
     minSdkVersion(14)
-    targetSdkVersion(Sdk.target)
+    targetSdkVersion(29)
     versionCode = 1
     versionName = "1.0"
   }
@@ -17,7 +17,7 @@ android {
 
 dependencies {
   implementation(project(":anyadapter"))
-  implementation(Libs.kotlinStdLib)
-  implementation(Libs.androidxRecyclerView)
-  implementation(Libs.androidxKtx)
+  implementation(libs.kotlinStdlib)
+  implementation(libs.androidxRecyclerView)
+  implementation(libs.androidxCoreKtx)
 }

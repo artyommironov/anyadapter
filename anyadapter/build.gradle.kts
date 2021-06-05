@@ -4,10 +4,8 @@ plugins {
   kotlin("android")
 }
 
-setupDependencyUpdates()
-
 android {
-  compileSdkVersion(Sdk.compile)
+  compileSdkVersion(29)
 
   buildFeatures {
     buildConfig = false
@@ -19,10 +17,10 @@ android {
 }
 
 dependencies {
-  implementation(Libs.kotlinStdLib)
-  implementation(Libs.androidxRecyclerView)
-  implementation(Libs.androidxAnnotation)
-  testImplementation(Libs.kotlinTestJunit)
+  implementation(libs.kotlinStdlib)
+  implementation(libs.androidxRecyclerView)
+  implementation(libs.androidxAnnotation)
+  testImplementation(libs.kotlinTestJunit)
 }
 
 afterEvaluate {
