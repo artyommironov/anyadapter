@@ -4,12 +4,13 @@ plugins {
 }
 
 android {
-  compileSdkVersion(29)
+  val sdkVersion = 30
+  compileSdkVersion(sdkVersion)
 
   defaultConfig {
     applicationId = "com.artyommironov.anyadaptersample"
     minSdkVersion(14)
-    targetSdkVersion(29)
+    targetSdkVersion(sdkVersion)
     versionCode = 1
     versionName = "1.0"
   }
