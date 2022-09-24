@@ -16,6 +16,7 @@
 
 package com.artyommironov.anyadapter
 
+import android.annotation.SuppressLint
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AdapterListUpdateCallback
 import androidx.recyclerview.widget.AsyncDifferConfig
@@ -44,6 +45,7 @@ class AnyAdapter() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     return map(T::class.java, holderCreator)
   }
 
+  @SuppressLint("NotifyDataSetChanged")
   fun submitList(list: List<Any>) {
     currentList = list
     differ?.submitList(list) ?: notifyDataSetChanged()

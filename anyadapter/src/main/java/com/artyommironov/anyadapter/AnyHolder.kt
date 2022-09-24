@@ -34,6 +34,7 @@ abstract class AnyHolder<T : Any>(view: View) : RecyclerView.ViewHolder(view) {
   ) : this(LayoutInflater.from(parent.context).inflate(layoutId, parent, false))
 
   fun onBindViewHolder(item: Any) {
+    @Suppress("UNCHECKED_CAST")
     currentItem = item as T
     onBind(item)
   }
