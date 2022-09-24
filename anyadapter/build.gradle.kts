@@ -17,10 +17,10 @@ android {
 }
 
 dependencies {
-  implementation(libs.kotlinStdlib)
-  implementation(libs.androidxRecyclerView)
-  implementation(libs.androidxAnnotation)
-  testImplementation(libs.kotlinTestJunit)
+  implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.10")
+  implementation("androidx.recyclerview:recyclerview:1.2.0")
+  implementation("androidx.annotation:annotation:1.2.0")
+  testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.5.10")
 }
 
 afterEvaluate {

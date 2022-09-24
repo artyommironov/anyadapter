@@ -18,7 +18,7 @@ android {
 
 dependencies {
   implementation(project(":anyadapter"))
-  implementation(libs.kotlinStdlib)
-  implementation(libs.androidxRecyclerView)
-  implementation(libs.androidxCoreKtx)
+  implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.10")
+  implementation("androidx.recyclerview:recyclerview:1.2.0")
+  implementation("androidx.core:core-ktx:1.3.2")
 }
