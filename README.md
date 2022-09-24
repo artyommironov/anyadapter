@@ -1,7 +1,7 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-orange.svg)](https://opensource.org/licenses/Apache-2.0)
 [![](https://jitpack.io/v/artyommironov/anyadapter.svg)](https://jitpack.io/#artyommironov/anyadapter)
 
-# anyadapter
+# AnyAdapter
 Forget about writing RecyclerView adapters!
 
 ## Setup
@@ -18,7 +18,7 @@ allprojects {
 In module `build.gradle`
 ```
 dependencies {
-    implementation 'com.github.artyommironov:anyadapter:1.0.0'
+    implementation 'com.github.artyommironov:anyadapter:1.0.1'
 }
 ```
 
@@ -62,7 +62,7 @@ adapter.submitList(listOf("Header", Post("Hello world!"), ..))
 
 ## License
 ```txt
-Copyright 2021 Artyom Mironov
+Copyright 2022 Artyom Mironov
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
