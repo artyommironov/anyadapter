@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-  val sdkVersion = 30
+  val sdkVersion = 33
   compileSdk = sdkVersion
 
   defaultConfig {
@@ -18,7 +18,7 @@ android {
 
 dependencies {
   implementation(project(":anyadapter"))
-  implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.10")
-  implementation("androidx.recyclerview:recyclerview:1.2.0")
-  implementation("androidx.core:core-ktx:1.3.2")
+  implementation("org.jetbrains.kotlin:kotlin-stdlib:1.7.10")
+  implementation("androidx.recyclerview:recyclerview:1.2.1")
+  implementation("androidx.core:core-ktx:1.9.0")
 }

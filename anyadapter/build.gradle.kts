@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-  compileSdk = 30
+  compileSdk = 33
 
   buildFeatures {
     buildConfig = false
@@ -17,10 +17,10 @@ android {
 }
 
 dependencies {
-  implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.10")
-  implementation("androidx.recyclerview:recyclerview:1.2.0")
-  implementation("androidx.annotation:annotation:1.2.0")
-  testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.5.10")
+  implementation("org.jetbrains.kotlin:kotlin-stdlib:1.7.10")
+  implementation("androidx.recyclerview:recyclerview:1.2.1")
+  implementation("androidx.annotation:annotation:1.5.0")
+  testImplementation("org.jetbrains.kotlin:kotlin-test-junit:1.7.0")
 }
 
 afterEvaluate {
