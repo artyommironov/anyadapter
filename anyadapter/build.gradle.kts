@@ -5,14 +5,14 @@ plugins {
 }
 
 android {
-  compileSdkVersion(30)
+  compileSdk = 30
 
   buildFeatures {
     buildConfig = false
   }
 
   defaultConfig {
-    minSdkVersion(14)
+    minSdk = 14
   }
 }
 
