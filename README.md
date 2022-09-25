@@ -4,28 +4,13 @@
 # AnyAdapter
 Forget about writing RecyclerView adapters!
 
-## Setup
-In root `build.gradle`
-```
-allprojects {
-    repositories {
-        ...
-        maven { url 'https://jitpack.io' }
-    }
-}
-```
-
-In module `build.gradle`
-```
-dependencies {
-    implementation 'com.github.artyommironov:anyadapter:1.0.1'
-}
-```
+## Install
+[How to install](https://jitpack.io/#artyommironov/anyadapter/1.0.1)
 
 ## Usage
-Suppose you want to show multiple item types in RecyclerView (for example posts with headers and ads)
+Suppose you want to show multiple types of items in a RecyclerView, for example posts with headers and ads
 
-### 1. Create classes extending AnyHolder for your items
+### 1. Create classes extending AnyHolder for each item type
 ```kotlin
 class PostHolder(
     parent: ViewGroup,
@@ -45,7 +30,7 @@ class PostHolder(
 data class Post(val message: String)
 ```
 
-### 2. Create AnyAdapter and pass your holders to it:
+### 2. Create AnyAdapter instance and attach holders to it
 ```kotlin
 val adapter = AnyAdapter()
     .map { PostHolder(it, ::onPostClick) }
@@ -55,9 +40,9 @@ val adapter = AnyAdapter()
 recyclerView.adapter = adapter
 ```
 
-### 3. Put you items inside adapter. Done!
+### 3. Put items inside the adapter. Done!
 ```kotlin
-adapter.submitList(listOf("Header", Post("Hello world!"), ..))
+adapter.submitList(listOf("Header", Post("Hello!"), Post("Bye!"), Ad()))
 ```
 
 ## License
