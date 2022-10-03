@@ -5,12 +5,12 @@ plugins {
 }
 
 android {
+  namespace = "com.artyommironov.anyadapter"
   compileSdk = 33
 
   buildFeatures {
     buildConfig = false
   }
-
   defaultConfig {
     minSdk = 14
   }

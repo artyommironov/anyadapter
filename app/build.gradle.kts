@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+  namespace = "com.artyommironov.anyadaptersample"
   val sdkVersion = 33
   compileSdk = sdkVersion
 
